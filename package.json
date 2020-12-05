@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^4.5.3",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   },
