@@ -1,4 +1,5 @@
 const path = require("path");
+const webpackHTMLPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.js",
@@ -8,7 +9,8 @@ module.exports = {
 
     // devtool: "none",
     output: {
-        filename: "main.js",
+        // [contentHash] is a hash string to main.js file for prevent hashing
+        filename: "main.[contentHash].js",
         path: path.resolve(__dirname, "dist")
     },
     module: {
@@ -22,5 +24,8 @@ module.exports = {
                 ],
             },
         ],
-    }
+    },
+    plugins: [new webpackHTMLPlugin({
+        template: "./src/templete.html"
+    })]
 }
