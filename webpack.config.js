@@ -24,6 +24,20 @@ module.exports = {
                     'sass-loader' //1: convert into CSS
                 ],
             },
+            {
+                test: /\.html$/i,
+                use: ['html-loader']
+            },
+            {
+                test: /\.(svg|png|jpg|gif)$/i,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[hash].[ext]",
+                        outputPath: "imgs"
+                    }
+                }
+            }
         ],
     },
     plugins: [new webpackHTMLPlugin({
