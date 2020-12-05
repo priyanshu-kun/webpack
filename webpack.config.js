@@ -4,15 +4,16 @@ const webpackHTMLPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: "./src/index.js",
     // change to dev or prod mode
-    mode: "development",
+    // mode: "development",
     // show code not in eval
 
     // devtool: "none",
-    output: {
-        // [contentHash] is a hash string to main.js file for prevent hashing
-        filename: "main.[contentHash].js",
-        path: path.resolve(__dirname, "dist")
-    },
+
+    // output: {
+    // [contentHash] is a hash string to main.js file for prevent hashing
+    //     filename: "main.[contentHash].js",
+    //     path: path.resolve(__dirname, "dist")
+    // },
     module: {
         rules: [
             {
